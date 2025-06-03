@@ -1,0 +1,46 @@
+.header {
+    box-shadow: 1px 1px 2px gray;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto slab 700";
+    width: 50%;
+    max-width: 800px;
+    padding: 0 16px;
+}
+
+.header__logo--black {
+    color: black;
+}
+
+.link--black {
+    color: black;
+}
+
+@media (max-width: 1600px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .header__logo {
+        z-index: 99;
+    }
+}

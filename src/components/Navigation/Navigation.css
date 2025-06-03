@@ -1,0 +1,154 @@
+.nav {
+    width: 50%;
+    max-width: 800px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 35px;
+}
+
+.nav__list-element {
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 3px solid transparent;
+    font-family: "Roboto 500";
+}
+
+.nav__mobile-menu {
+    width: 100%;
+    display: none;
+}
+
+.nav__mobile__btn {
+    position: absolute;
+    height: 32px;
+    width: 30px;
+    right: 14px;
+    display: flex;
+}
+
+.nav__mobile__btn:hover {
+    cursor: pointer;
+}
+
+.nav__menu-hands {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+.nav--black .nav__menu-hands {
+    background-color: black;
+}
+
+.nav__menu-hand1 {
+    top: 8px
+}
+
+.nav__menu-hand2 {
+    top: 20px
+}
+
+.nav__mobile--active .nav__menu-hand1 {
+    top: 14px;
+    transform: rotate(45deg);
+}
+
+.nav__mobile--active .nav__menu-hand2 {
+    top: 14px;
+    transform: rotate(-45deg);
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+}
+
+.nav--black .nav__link {
+    color: black;
+}
+
+.nav--active {
+    border-color: white;
+}
+
+.nav--black .nav--active {
+    border-color: black;
+}
+
+.nav__login-button {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 14px 20px;
+    color: white;
+    font-family: "Roboto 500";
+    background-color: transparent;
+}
+
+.nav--black .nav__login-button {
+    border-color: black;
+    color: black;
+}
+
+.nav__login-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.nav--black .nav__login-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.nav__mobile--active {
+    background-color: #1A1B22;
+}
+
+.nav--black.nav__mobile--active {
+    background-color: rgb(211, 211, 211) !important;
+}
+
+
+@media (max-width: 1600px) {
+    .nav {
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .nav__list {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav__list-element {
+        display: none;
+    }
+
+    .nav__mobile-menu {
+        display: flex;
+    }
+
+    .nav__mobile--active .nav__list-element {
+        display: flex;
+    }
+
+    .nav--active,
+    .nav--black .nav--active {
+        border-color: transparent;
+    }
+}

@@ -1,0 +1,51 @@
+.saved-articles {
+    padding: calc(80px + 56px) 16px 56px 16px;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    font-family: "Roboto";
+}
+
+.saved-articles__intro {
+    font-size: 18px;
+    line-height: 24px;
+    color: #1a1b2281;
+}
+
+.saved-articles__title {
+    font-family: "Roboto Slab";
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin: 30px auto;
+}
+
+.saved-articles__cards {
+    padding: 0px 16px;
+    background-color: #F5F6F7;
+}
+
+.saved-articles__keywords-data {
+    text-transform: capitalize;
+}
+
+.saved-articles__more {
+    width: 100%;
+    padding: 0 0 62px 0;
+    text-align: center;
+}
+
+.saved-articles__more-btn {
+    min-height: 64px;
+    padding: 0 50px;
+    border-radius: 64px;
+    border: 0;
+    font-family: "Roboto 500";
+    color: #1A1B22;
+    background-color: white;
+}
+
+.saved-articles__more-btn:hover {
+    background-color: #E8E8E8;
+    cursor: pointer;
+}
