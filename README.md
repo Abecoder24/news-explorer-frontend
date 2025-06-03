@@ -18,7 +18,7 @@ I like to create a Utility file that handles miscellaneous functions. I have als
 Thank you for taking the time to review my project!
 
 
-### [Enviroment Variables Needed*]
+### [Environment Variables Needed*]
 - VITE_NODE_ENV = "local"
 - VITE_API_KEY = "Please put your Weather API KEY HERE"
   
