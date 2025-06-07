@@ -1,7 +1,7 @@
 import "./Preloader.css"
 export default function Preloader({ isLoading }) {
     return (
-        <div className={`preloader ${isLoading ? "preloader--loading" : ""}`}>
+        <section className={`preloader ${isLoading ? "preloader--loading" : ""}`}>
             <svg className="preloader__svg" width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-inside-1_22618_1869" fill="white">
                     <path d="M74 37C74 53.604 63.0629 67.6536 48 72.3374C44.525 73.4179 40.8305 74 37 74C16.5655 74 0 57.4345 0 37C0 16.5655 16.5655 0 37 0C57.4345 0 74 16.5655 74 37Z" />
@@ -11,6 +11,6 @@ export default function Preloader({ isLoading }) {
                     <clipPath id="paint0_angular_22618_1869_clip_path"><path d="M48 72.3374L47.7031 71.3825L48 72.3374ZM37 73C17.1177 73 1 56.8823 1 37H-1C-1 57.9868 16.0132 75 37 75V73ZM1 37C1 17.1177 17.1177 1 37 1V-1C16.0132 -1 -1 16.0132 -1 37H1ZM37 1C56.8823 1 73 17.1177 73 37H75C75 16.0132 57.9868 -1 37 -1V1ZM73 37C73 53.1538 62.3598 66.825 47.7031 71.3825L48.2969 73.2923C63.7661 68.4822 75 54.0543 75 37H73ZM47.7031 71.3825C44.3232 72.4335 40.7287 73 37 73V75C40.9323 75 44.7269 74.4024 48.2969 73.2923L47.7031 71.3825Z" mask="url(#path-1-inside-1_22618_1869)" /></clipPath></defs>
             </svg>
             <span>Searching for news...</span>
-        </div>
+        </section>
     )
 }

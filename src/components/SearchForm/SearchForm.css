@@ -1,7 +1,6 @@
 .search {
     margin: 80px auto;
     width: 100%;
-    max-width: 600px;
     height: 64px;
     border-radius: 64px;
     position: relative;
@@ -15,6 +14,8 @@
     text-indent: 24px;
     outline: 0px;
     background-color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .search__submit {
@@ -27,7 +28,7 @@
     border: 0;
     background-color: #2F71E5;
     color: white;
-    font-family: "Roboto 500";
+    font-family: "Roboto";
     font-size: 18px;
 }
 
@@ -35,18 +36,25 @@
     background-color: #347EFF;
     cursor: pointer;
 }
+.search__submit:active {
+    background-color: #2A65CC;
+}
+
+@media (max-width: 1600px) {
+    .search__input {
+        height: 52px;
+    }
+    .search__submit {
+        height: 52px;
+        padding: 0 52px;
+    }
+}
 
 @media (max-width: 500px) {
     .search {
         height: auto;
         border-radius: 0;
     }
-
-    .search__input {
-        text-indent: 0;
-        text-align: center;
-    }
-
     .search__submit {
         position: static;
         margin-top: 16px;

@@ -74,20 +74,21 @@
     pointer-events: none;
 }
 
-.card__floating-buttons:hover .floating-buttons__icon-path {
+.floating-buttons__wrapper{
+    display: flex
+}
+.floating-buttons__wrapper:hover .floating-buttons__info{
+    display: block;
+}
+.floating-buttons__wrapper:hover .floating-buttons__icon-path {
     stroke: black;
 }
-
 .card--saved {
     fill: #2F71E5;
 }
 
 .card--saved .floating-buttons__icon-path {
     stroke: #2F71E5;
-}
-
-.card__floating-buttons:hover .floating-buttons__info {
-    display: block;
 }
 
 .card__image {
@@ -129,6 +130,7 @@
 
 .card__title {
     font-family: "Roboto Slab";
+    font-weight: 400;
     font-size: 26px;
     line-height: 30px;
     color: #1A1B22;
@@ -177,6 +179,5 @@
     .cards {
         display: flex;
         flex-direction: column;
-        max-width: 400px;
     }
 }

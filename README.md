@@ -20,7 +20,8 @@ Thank you for taking the time to review my project!
 
 ### [Environment Variables Needed*]
 - VITE_NODE_ENV = "local"
-- VITE_API_KEY = "Please put your Weather API KEY HERE"
+- VITE_API_KEY = "0c4c7c1f90234c69aaa1bda42000e924"
+<!-- its hardcodded BTW in the api.js -->
   
 **Link to the project**  
   

@@ -17,10 +17,10 @@ export default function SavedArticles({ savedArticles, visibleCardsLimit, handle
 
     return (
         <>
-            <div className="saved-articles">
-                <span className="saved-articles__intro">
+            <section className="saved-articles">
+                <p className="saved-articles__intro">
                     Saved articles
-                </span>
+                </p>
                 <h1 className="saved-articles__title">
                     Abe, you have {savedArticles.length} saved articles
                 </h1>
@@ -43,8 +43,8 @@ export default function SavedArticles({ savedArticles, visibleCardsLimit, handle
 
                     }
                 </span>
-            </div>
-            <div className="saved-articles__cards">
+            </section>
+            <section className="saved-articles__cards">
                 {
                     <NewsCard data={savedArticles} visibleCardsLimit={visibleCardsLimit} handleArticleDelete={handleArticleDelete} />
                 }
@@ -53,7 +53,7 @@ export default function SavedArticles({ savedArticles, visibleCardsLimit, handle
                         <button className="saved-articles__more-btn" onClick={() => handleLoadMore(savedArticles)}>Show more</button>
                     </div>
                 }
-            </div>
+            </section>
         </>
     )
 }

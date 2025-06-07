@@ -20,7 +20,7 @@ export default function ModalWithForm({ submitButtonText, title, modalSwitch, is
                 {/* <span className="modal__form-error">
                     Email is not available
                 </span> */}
-                <input type="submit" value={submitButtonText} className={`${isFormValid ? "modal__submit modal__submit-valid" : "modal__submit"}`} />
+                <input type="submit" value={submitButtonText} className={`${isFormValid ? "modal__submit modal__submit-valid" : "modal__submit"}`}/>
                 {modalSwitch && <span className="modal__switch">
                     or {modalSwitch == "Sign up" ? <span className="modal--blue modal--clickable" onClick={() => showModal('sign up')}>{modalSwitch}</span> : <span className="modal--blue modal--clickable" onClick={() => showModal('sign in')}>{modalSwitch}</span>}
                 </span>}

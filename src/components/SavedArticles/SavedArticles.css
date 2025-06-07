@@ -16,12 +16,12 @@
     font-family: "Roboto Slab";
     font-size: 40px;
     line-height: 46px;
+    font-weight: 400;
     color: #1A1B22;
     margin: 30px auto;
 }
 
 .saved-articles__cards {
-    padding: 0px 16px;
     background-color: #F5F6F7;
 }
 
@@ -48,4 +48,11 @@
 .saved-articles__more-btn:hover {
     background-color: #E8E8E8;
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .saved-articles__title {
+        font-size: 30px;
+        line-height: 36px;
+    }   
 }

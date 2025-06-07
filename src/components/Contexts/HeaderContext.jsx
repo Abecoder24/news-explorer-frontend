@@ -2,7 +2,8 @@ import { createContext } from "react";
 
 const HeaderContext = createContext({
     showModal: () => { },
-    toggleMobileMenu: () => { }
+    toggleMobileMenu: () => { },
+    activeModal: ""
 })
 
 export default HeaderContext

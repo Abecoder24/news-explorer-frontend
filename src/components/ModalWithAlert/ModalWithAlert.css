@@ -113,10 +113,12 @@
     color: white;
 }
 
-.modal__switch {
-    text-align: center;
-    font-size: 14px;
+.modal__switch-alert {
+    text-align: left;
+    font-size: 18px;
     font-family: "Inter";
+    font-weight: 400;
+    margin: 0;
 }
 
 .modal--blue {

@@ -2,7 +2,7 @@ const newsApiBaseUrl = import.meta.env.VITE_NODE_ENV === "production"
   ? "https://nomoreparties.co/news/v2/everything"
   : "https://newsapi.org/v2/everything"; 
 
-const API_KEY = import.meta.env.VITE_API_KEY
+const API_KEY = import.meta.env.VITE_API_KEY || '0c4c7c1f90234c69aaa1bda42000e924'
 
 function searchArticles(q){
     return fetch(newsApiBaseUrl + "?q=" + q + "&searchIn=title", {

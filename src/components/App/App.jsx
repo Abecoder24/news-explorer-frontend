@@ -12,6 +12,7 @@ import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import HeaderContext from "../Contexts/HeaderContext";
 import ModalContext from "../Contexts/ModalContext";
+import ModalWithAlert from "../ModalWithAlert/ModalWithAlert";
 
 
 export default function App() {
@@ -160,6 +161,7 @@ export default function App() {
     //handle Register
     function handleRegister() {
         if (useFormValidation.email.isValid && useFormValidation.password.isValid && useFormValidation.username.isValid) {
+            setActiveModal("registrationSuccessful")
             console.log({
                 username: useFormData.username,
                 email: useFormData.email,
@@ -300,37 +302,40 @@ export default function App() {
             <HeaderContext.Provider value={
                 {
                     showModal,
-                    toggleMobileMenu
+                    toggleMobileMenu,
+                    activeModal: useActiveModal
                 }
             }>
                 <Header />
             </HeaderContext.Provider>
-            <Routes>
-                <Route path="/" element={
-                    <HomeContext.Provider value={
-                        {
-                            handleSubmit: handleSearch,
-                            isLoading: useIsSearching,
-                            searchResults: useSearchResults,
-                            visibleCardsLimit: useVisibleCardsLimit,
-                            searchValueGetter: useSearchHook,
-                            searchValueSetter: setSearchHook,
-                            handleLoadMore,
-                            handleInputChange,
-                            apiErrors: useApiErrors,
-                            isLoggedIn: useIsLoggedIn,
-                            handleArticleSave: toggleArticleSave
-                        }
+            <main className="main">
+                <Routes>
+                    <Route path="/" element={
+                        <HomeContext.Provider value={
+                            {
+                                handleSubmit: handleSearch,
+                                isLoading: useIsSearching,
+                                searchResults: useSearchResults,
+                                visibleCardsLimit: useVisibleCardsLimit,
+                                searchValueGetter: useSearchHook,
+                                searchValueSetter: setSearchHook,
+                                handleLoadMore,
+                                handleInputChange,
+                                apiErrors: useApiErrors,
+                                isLoggedIn: useIsLoggedIn,
+                                handleArticleSave: toggleArticleSave
+                            }
+                        }>
+                            <Home />
+                            <AboutAuthor />
+                        </HomeContext.Provider>
                     }>
-                        <Home />
-                    </HomeContext.Provider>
-                }>
-                </Route>
-                <Route path="/saved-articles" element={
-                    <SavedArticles savedArticles={useSavedArticles} visibleCardsLimit={useVisibleCardsLimit} handleLoadMore={handleLoadMore} getSavedArticles={getSavedArticles} handleArticleDelete={handleArticleDelete} />
-                }></Route>
-            </Routes>
-            <AboutAuthor />
+                    </Route>
+                    <Route path="/saved-articles" element={
+                        <SavedArticles savedArticles={useSavedArticles} visibleCardsLimit={useVisibleCardsLimit} handleLoadMore={handleLoadMore} getSavedArticles={getSavedArticles} handleArticleDelete={handleArticleDelete} />
+                    }></Route>
+                </Routes>
+            </main>
             <ModalContext.Provider value={
                 {
                     showModal,
@@ -345,6 +350,7 @@ export default function App() {
             }>
                 {useActiveModal == "sign in" && <LoginModal />}
                 {useActiveModal == "sign up" && <RegisterModal />}
+                {useActiveModal == "registrationSuccessful" && <ModalWithAlert title={"Registration successfully completed!"} modalSwitch="Sign in" />}
             </ModalContext.Provider>
             <Footer />
         </div>
