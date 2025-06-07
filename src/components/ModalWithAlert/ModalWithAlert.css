@@ -1,0 +1,145 @@
+.modal {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__form {
+    width: 100%;
+    max-width: 430px;
+    background-color: white;
+    padding: 36px 34px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 30px;
+}
+
+.modal__close {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: -46px;
+    top: -46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__close:hover {
+    cursor: pointer;
+}
+
+.modal__close-hand {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+}
+
+.close-hand1 {
+    transform: rotate(45deg);
+}
+
+.close-hand2 {
+    transform: rotate(-45deg);
+}
+
+.modal__title {
+    font-family: "Roboto 900";
+    font-size: 24px;
+    color: #1A1B22;
+}
+
+.modal__input-label {
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter";
+}
+
+.modal__input {
+    height: 35px;
+    border: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.735);
+    outline: none;
+    font-family: "Inter";
+}
+
+.modal__input-error,
+.modal__form-error {
+    font-family: "Inter";
+    font-size: 12px;
+    color: red;
+    padding: 0;
+}
+
+.modal__form-error {
+    margin: 0px 0 -20px 0 !important;
+    text-align: center;
+}
+
+.modal__input:focus {
+    border-color: black;
+}
+
+.modal__submit {
+    height: 64px;
+    border-radius: 64px;
+    border: 0px;
+    background-color: #E6E8EB;
+    font-family: "Roboto 500";
+    font-size: 18px;
+    color: #B6BCBF;
+}
+
+.modal__submit-valid {
+    background-color: #2F71E5;
+    color: white;
+}
+
+.modal__switch-alert {
+    text-align: left;
+    font-size: 18px;
+    font-family: "Inter";
+    font-weight: 400;
+    margin: 0;
+}
+
+.modal--blue {
+    color: #2F71E5;
+}
+
+.modal--clickable:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .modal__close {
+        top: -60px;
+        right: 10px;
+    }
+
+    .modal__form {
+        width: 100%;
+        max-width: none;
+        border-radius: 16px 16px 0 0;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
+    }
+}
